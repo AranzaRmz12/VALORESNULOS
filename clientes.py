@@ -14,4 +14,7 @@ valores_nulos = df.isnull().sum()
 # Hay 15 valores nulos en la columna 'RFC', por lo que dichos valores nulos se deben sustituir por un RFC estándar
 df["RFC"] = df["RFC"].fillna("XAXX010101000")
 valores_nulos = df.isnull().sum()
-print(valores_nulos)
+#print(valores_nulos)
+
+# Convertir DataFrame a CSV
+df.to_csv('clientes_limpio.csv')

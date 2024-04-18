@@ -24,5 +24,7 @@ valores_nulos = df.isnull().sum()
 # Hay 11 valores nulos en la columna 'DOC_ANT', por lo que dichos valores nulos se deben sustituir por un "No disponible"
 df["DOC_ANT"] = df["DOC_ANT"].fillna("No disponible")
 valores_nulos = df.isnull().sum()
-print(valores_nulos)
+#print(valores_nulos)
 
+# Convertir DataFrame a CSV
+df.to_csv('devoluciones_limpio.csv')
